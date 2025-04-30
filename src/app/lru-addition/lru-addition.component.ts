@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './lru-addition.component.css'
 })
 export class LruAdditionComponent {
+
   num1: number = 0;
   num2: number = 0;
   result: number | null = null;
