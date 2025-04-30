@@ -1,1 +1,23 @@
-<p>lru-addition works!</p>
+<mat-card>
+    <mat-card-title>Add Two Numbers</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>First Number</mat-label>
+        <input matInput type="number" [(ngModel)]="num1">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Second Number</mat-label>
+        <input matInput type="number" [(ngModel)]="num2">
+      </mat-form-field>
+  
+      <div style="margin-top: 1em;">
+        <button mat-raised-button color="primary" (click)="add()">Add</button>
+      </div>
+  
+      <div *ngIf="result !== null" style="margin-top: 1em;">
+        <strong>Result:</strong> {{ result }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
