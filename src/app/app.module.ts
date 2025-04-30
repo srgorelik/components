@@ -30,6 +30,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { JgbMagic8BallComponent } from './jgb-magic-8-ball/jgb-magic-8-ball.component';
 import { PizzaReviewComponent } from './pizza-review/pizza-review.component';
 import { MatSelectModule } from '@angular/material/select';
+import { LruAdditionComponent } from './lru-addition/lru-addition.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MatSelectModule } from '@angular/material/select';
     JgbMagic8BallComponent,
     MnFivekPaceComponent,
     PizzaReviewComponent,
+    LruAdditionComponent,
   ],
   imports: [
     BrowserModule
