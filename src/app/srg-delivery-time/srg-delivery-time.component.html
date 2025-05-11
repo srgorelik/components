@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title> Delivery Time Component </mat-card-title>
+  <mat-card-content>
+    <br />
+    <mat-form-field>
+      <mat-label>Pick a delivery time</mat-label>
+      <input matInput [matTimepicker]="picker" [(ngModel)]="selectedTime" />
+      <mat-timepicker-toggle matIconSuffix [for]="picker">
+        <mat-icon matTimepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-timepicker-toggle>
+      <mat-timepicker #picker />
+    </mat-form-field>
+
+    <h3>Current time: {{ currentTime | date : "h:mm a" }}</h3>
+
+    <h3 [style.color]="timeColor">
+      Delivery time: {{ selectedTime | date : "h:mm a" }}
+    </h3>
+  </mat-card-content>
+</mat-card>

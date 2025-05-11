@@ -14,9 +14,9 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormField } from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MnFivekPaceComponent } from './mn-fivek-pace/mn-fivek-pace.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
@@ -25,12 +25,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DateComponent } from './date/date.component';
 
-
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { JgbMagic8BallComponent } from './jgb-magic-8-ball/jgb-magic-8-ball.component';
 import { PizzaReviewComponent } from './pizza-review/pizza-review.component';
 import { MatSelectModule } from '@angular/material/select';
 import { LruAdditionComponent } from './lru-addition/lru-addition.component';
+
+// delivery time imports
+import { SrgDeliveryTimeComponent } from './srg-delivery-time/srg-delivery-time.component';
+import { MatTimepickerModule } from '@angular/material/timepicker';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatIcon } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,27 +48,30 @@ import { LruAdditionComponent } from './lru-addition/lru-addition.component';
     MnFivekPaceComponent,
     PizzaReviewComponent,
     LruAdditionComponent,
+    SrgDeliveryTimeComponent,
   ],
   imports: [
-    BrowserModule
-    , AppRoutingModule
-    , FormsModule
-    , BrowserAnimationsModule
-    , MatCardModule
-    , MatButtonModule
-    , MatCheckboxModule
-    , MatInputModule
-    , MatIconModule
-    , MatDatepickerModule
-    , MatNativeDateModule
-    , MatFormFieldModule
-    , MatFormField
-    , CommonModule
-    , MatProgressSpinnerModule
-    , MatSelectModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatFormField,
+    CommonModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatTimepickerModule,
+    MatIcon,
   ],
-  
-  providers: [],
+
+  providers: [provideNativeDateAdapter()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
